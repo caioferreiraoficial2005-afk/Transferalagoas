@@ -3,562 +3,337 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Neto Passeios Alagoas · Passeios privativos, transfer e roteiros em Alagoas</title>
-<meta name="description" content="Passeios privativos, transfer do aeroporto pro hotel e roteiros personalizados em Maceió e em toda Alagoas, com o guia Neto. Nota 5,0 no Google.">
-<meta property="og:title" content="Neto Passeios Alagoas">
-<meta property="og:description" content="Alagoas do seu jeito, com quem conhece cada canto. Passeios, transfer e roteiros personalizados.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Neto Passeios Alagoas">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://neto-passeios-alagoas.vercel.app/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Neto Passeios Alagoas: Alagoas do seu jeito, com quem conhece">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://neto-passeios-alagoas.vercel.app/og.jpg">
-<link rel="icon" href="logo.png">
-<link rel="preload" href="capa.jpg" as="image" media="(min-width:0px)">
-<link rel="preload" href="barlowc-800.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+<title>Transfer Alagoas · Transfer privativo no Aeroporto de Maceió</title>
+<meta property="og:title" content="Transfer Alagoas">
+<meta property="og:image" content="https://transfer-alagoas.vercel.app/og.jpg">
+<meta name="description" content="Transfer privativo, corporativo e executivo no Aeroporto de Maceió, com atendimento 24 horas. Conforto que te leva, experiências que ficam.">
 <style>
-@font-face{font-family:"BC";src:url(barlowc-600.woff2) format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"BC";src:url(barlowc-700.woff2) format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:"BC";src:url(barlowc-800.woff2) format("woff2");font-weight:800;font-display:swap}
-@font-face{font-family:"BW";src:url(barlow-400.woff2) format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"BW";src:url(barlow-500.woff2) format("woff2");font-weight:500;font-display:swap}
-@font-face{font-family:"BW";src:url(barlow-600.woff2) format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"BW";src:url(barlow-700.woff2) format("woff2");font-weight:700;font-display:swap}
-:root{--azul:#1638a6;--noite:#16181d;--laranja:#f7931e;--brasa:#e8640c;--papel:#f7f5f1;--linha:#dcd8d0;--tinta:#111a33;--muted:#5a6173}
+@font-face{font-family:"YS";src:url(yeseva.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"MT";src:url(montserrat-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"MT";src:url(montserrat-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"MT";src:url(montserrat-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"MT";src:url(montserrat-700.woff2) format("woff2");font-weight:700;font-display:swap}
+:root{--azul:#e07a0c;--fundo:#141518;--verm:#f28a12;--bg:#f1f0ee;--tinta:#22292e;--muted:#6b7379;--rod:#283137;--linha:rgba(34,41,46,.12)}
 *{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
-body{font-family:"BW",system-ui,sans-serif;font-size:18px;line-height:1.6;color:var(--tinta);background:var(--papel);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html{background:var(--bg)}
+body{font-family:"MT",system-ui,sans-serif;color:var(--tinta);background:var(--bg);font-size:15px;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:"BC",sans-serif;font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:-.005em}
-.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
-.k{display:block;font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--brasa)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;border-radius:0;border:0;cursor:pointer;font-family:"BW";font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;padding:19px 30px;background:var(--laranja);color:#fff;transition:background .25s,color .25s;white-space:nowrap}
-.btn:hover{background:var(--brasa)}
-.btn svg{width:20px;height:20px;flex:none}
-.btn.lin{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.85)}
-.btn.lin:hover{background:#fff;color:var(--tinta)}
-.hero .bts{display:flex;gap:12px;flex-wrap:wrap}
-.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.04em}
-.split .w>span{display:inline-block;transform-origin:0 100%}
-.tit{text-align:center;max-width:860px;margin:0 auto}
-.tit h2{font-size:clamp(52px,6vw,96px);color:var(--noite);margin-top:14px}
-.tit h2 em{font-style:normal;color:var(--azul)}
-.tit p{color:var(--muted);max-width:46ch;margin:18px auto 0}
+.ys{font-family:"YS",serif;font-weight:400;letter-spacing:.01em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--verm);color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:17px 30px;border-radius:0;transition:background .3s}
+.btn:hover{background:#d4740a}
+.btn svg{width:16px;height:16px;fill:#fff}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.wi{display:inline-block;will-change:transform}
 
-/* NAV */
-#nav{position:fixed;inset:0 0 auto 0;z-index:60;padding:18px 0;transition:background .4s,padding .4s}
-#nav .wrap{display:flex;align-items:center;gap:34px}
-#nav .lg img{height:86px;width:auto;filter:drop-shadow(0 3px 10px rgba(0,0,0,.35));transition:height .4s}
-#nav nav{display:flex;gap:32px;margin-left:auto;font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:#fff}
-#nav nav a{opacity:.9}#nav nav a:hover{opacity:1}
-#nav .btn{padding:14px 22px;font-size:13px}
-#nav.solid{background:#fff;padding:8px 0;box-shadow:0 1px 0 var(--linha)}
-#nav.solid nav{color:var(--tinta)}
-#nav.solid .lg img{height:68px;filter:none}
+/* MENU */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:26px clamp(20px,3vw,44px);color:#fff;transition:background .4s,padding .4s,color .4s}
+nav.solid{background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--tinta);padding-block:14px;box-shadow:0 1px 0 var(--linha)}
+.nl{display:flex;align-items:center;gap:clamp(22px,4.4vw,74px);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.nl.r{justify-content:flex-end}
+.nl a{opacity:.95}
+.lang{font-size:10px;letter-spacing:.1em;margin-right:auto}
+.lang b{color:#ff9a2e}
+.logo{display:flex;flex-direction:column;align-items:flex-end;line-height:1;padding:0 clamp(20px,4vw,60px)}
+.logo span{display:flex;align-items:center;gap:8px;font-weight:600;font-size:27px;letter-spacing:.01em}
+.logo span i{width:17px;height:17px;border-radius:50%;background:conic-gradient(from 210deg,#ff9a2e,#e07a0c,#ff9a2e);display:block;position:relative}
+.logo span i::after{content:"";position:absolute;inset:4px 4px 5px 5px;border-radius:50%;background:#fff;opacity:.9}
+.logo small{font-size:9.5px;font-weight:600;letter-spacing:.2em;color:#ff9a2e;margin-top:3px}
 
 /* CAPA */
-.hero{position:relative;height:100vh;height:100svh;min-height:600px;color:#fff;overflow:hidden;background:var(--noite)}
-.hero picture,.hero .bg{position:absolute;inset:0;width:100%;height:100%}
-.hero .bg{object-fit:cover;object-position:50% 50%}
-.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(0deg,rgba(10,12,16,.7),rgba(10,12,16,0));pointer-events:none}
-.hero .sombra{position:absolute;inset:0;background:#0a0c10;opacity:0;z-index:3;pointer-events:none}
-.hero .wrap{position:absolute;left:0;right:0;bottom:clamp(44px,8vh,90px);z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:40px}
-.hero h1{font-size:clamp(60px,min(8.6vw,14vh),150px);max-width:9.5ch;text-shadow:0 4px 40px rgba(10,12,16,.35)}
-.hero h1 em{font-style:normal;color:var(--laranja)}
-.bora{display:flex;align-items:center;gap:10px;margin-top:20px;font-size:clamp(17px,1.4vw,20px);font-weight:500;white-space:nowrap}
-.bora .slot{position:relative;display:inline-block;height:1.7em;overflow:hidden;min-width:6.5em}
-.bora .slot b{position:absolute;left:0;top:0;white-space:nowrap;color:#fff;line-height:1.7em;font-weight:700}
-.hero .lado{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding-bottom:12px}
-.g5{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500}
-.g5 svg{width:24px;height:24px;background:#fff;padding:3px}
-.g5 b{font-weight:700}
+.capa{position:relative;height:120.33vw;overflow:hidden;background:var(--fundo)}
+.capa-img{position:absolute;left:0;top:-13vw;width:100%;height:133.33vw;object-fit:cover}
+.capa::after{content:"";position:absolute;left:0;right:0;bottom:0;height:16%;background:linear-gradient(180deg,rgba(241,240,238,0),var(--bg))}
+.pino{position:absolute;left:50.6%;top:23.6vw;z-index:3;display:flex;align-items:center}
+.pino i{width:9px;height:9px;background:#fff;border:2px solid rgba(255,255,255,.5);background-clip:padding-box;box-sizing:content-box}
+.pino u{display:block;width:clamp(40px,5vw,80px);height:1px;background:rgba(255,255,255,.7)}
+.pino .btn{padding:12px 22px;font-size:10px}
+.capa-t{position:absolute;z-index:3;left:0;right:0;top:27.6vw;text-align:center;color:#fff}
+.sobre-t{display:flex;align-items:center;justify-content:center;gap:16px;font-size:clamp(10px,.95vw,14px);font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.sobre-t::before,.sobre-t::after{content:"";width:clamp(30px,7vw,110px);height:1px;background:rgba(255,255,255,.75)}
+.capa h1{font-size:8.2vw;line-height:1;margin-top:.5vw;text-shadow:0 4px 40px rgba(12,12,14,.35)}
 
-/* ESTRELAS BRILHANDO */
-.est{display:inline-flex;gap:2px;color:#ffc21a}
-.est i{font-style:normal;display:inline-block;text-shadow:0 0 0 rgba(255,194,26,0)}
+/* títulos de seção com número atrás */
+.tit{position:relative;text-align:center;padding:0 20px}
+.tit .n{position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);font-family:"YS",serif;font-size:clamp(110px,12.5vw,190px);line-height:1;color:rgba(34,41,46,.055);pointer-events:none;user-select:none}
+.tit h2{position:relative;font-family:"YS",serif;font-weight:400;font-size:clamp(32px,3.5vw,54px);line-height:1.15;color:var(--azul)}
+.tit p{position:relative;margin-top:14px;color:var(--muted);max-width:46ch;margin-inline:auto}
 
-/* NETO */
-.quem{position:relative;z-index:5;will-change:clip-path;background:var(--papel);padding:clamp(110px,12vw,180px) 0}
-.quem .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(40px,6vw,100px);align-items:center}
-.sol{position:relative;aspect-ratio:1/1.1;max-width:540px;width:100%;justify-self:center}
-.sol .disco{position:absolute;left:-4%;top:8%;width:82%;aspect-ratio:1;border-radius:50%;background:var(--laranja)}
-.sol .foto{position:absolute;right:0;top:0;width:76%;height:100%;overflow:hidden}
-.sol .foto img{width:100%;height:100%;object-fit:cover;object-position:28% 30%}
-.sol .tag{position:absolute;left:0;bottom:7%;background:var(--noite);color:#fff;padding:14px 20px;font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;line-height:1.3}
-.sol .tag small{display:block;font-weight:500;letter-spacing:0;text-transform:none;opacity:.8;font-size:14px}
-.quem h2{font-size:clamp(54px,6vw,100px);color:var(--noite);margin:16px 0 24px}
-.quem h2 em{font-style:normal;color:var(--azul)}
-.quem p{color:var(--muted);max-width:50ch}
-.quem p+p{margin-top:14px}
-.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
-.num{background:#fff;padding:20px 18px 18px;border-top:3px solid var(--azul)}
-.num .ic{height:28px;display:flex;align-items:center;margin-bottom:12px}
-.num .ic svg{width:28px;height:28px}
-.num .ic .est{font-size:21px}
-.num b{display:block;font-family:"BC";font-weight:800;font-size:clamp(46px,4.2vw,62px);line-height:1;color:var(--noite)}
-.num>span{display:block;font-size:15px;color:var(--muted);line-height:1.35;margin-top:6px}
-.num.wa{border-top-color:#25d366}.num.wa .ic svg{color:#25d366}
-.num.gg{border-top-color:#ffc21a}
+/* 01 POR QUE */
+.pq{position:relative;z-index:4;margin-top:-34vw;padding-bottom:clamp(90px,10vw,150px)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3.6vw,54px);max-width:1000px;margin:clamp(60px,7vw,110px) auto 0;padding:0 24px}
+.card{background:#fff;box-shadow:0 14px 44px rgba(20,40,60,.09);text-align:center}
+.card img{width:100%;aspect-ratio:4/3.4;object-fit:cover}
+.card div{padding:26px 22px 30px}
+.card h3{font-size:13.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+.card p{font-size:13.5px;color:var(--muted);line-height:1.6}
 
-/* PASSEIOS: palco preso com 4 destaques que cobrem um ao outro rápido + grade com todos */
-.dest{position:relative;z-index:6;background:#fff}
-.dest-t{padding:clamp(110px,11vw,170px) 0 clamp(56px,6vw,90px)}
-.palco{position:relative;height:100vh;height:100svh;min-height:540px;overflow:hidden;background:var(--noite);color:#fff}
-.camada{position:absolute;inset:0;z-index:1;display:flex;align-items:flex-end;will-change:clip-path}
-.camada picture,.camada img{position:absolute;inset:0;width:100%;height:100%}
-.camada img{object-fit:cover}
-.camada::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,12,16,.72) 0%,rgba(10,12,16,.2) 45%,rgba(10,12,16,0) 100%)}
-.camada .esc{position:absolute;inset:0;z-index:3;background:#000;opacity:0;pointer-events:none}
-.camada .wrap{position:relative;z-index:2;width:100%;padding-bottom:clamp(50px,9vh,100px);display:flex;align-items:flex-end;justify-content:space-between;gap:40px}
-.camada .n{font-family:"BC";font-weight:700;font-size:18px;letter-spacing:.1em;opacity:.9}
-.camada small{display:block;font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#ffc477;margin-top:8px}
-.camada h3{font-size:clamp(64px,9vw,150px);margin-top:10px;text-shadow:0 4px 30px rgba(0,0,0,.3)}
-.camada .lado{max-width:380px;padding-bottom:10px}
-.camada p{font-size:18px;font-weight:500;margin-bottom:22px;text-shadow:0 2px 14px rgba(0,0,0,.45)}
-.todos{padding:clamp(80px,8vw,120px) 0 clamp(110px,11vw,160px)}
-.todos-h{display:flex;justify-content:space-between;align-items:flex-end;gap:30px}
-.todos-h h3{font-size:clamp(40px,4vw,64px);color:var(--noite);margin-top:12px}
-.todos-h h3 em{font-style:normal;color:var(--azul)}
-.todos-h p{color:var(--muted);max-width:40ch}
-.pgrid,.rgrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(clamp(170px,15vw,240px),auto);grid-auto-flow:dense;gap:clamp(10px,1.2vw,18px);margin-top:clamp(36px,4vw,56px)}
-.pgrid .g,.rgrid .g{grid-column:span 2;grid-row:span 2}
-.pgrid .t,.rgrid .t{grid-row:span 2}
-.pgrid .w,.rgrid .w{grid-column:span 2}
-.rgrid .f{grid-column:1/-1}
-.g b{font-size:clamp(40px,3.8vw,64px)!important}
-.pcard{position:relative;overflow:hidden;background:var(--noite);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px 16px;cursor:pointer}
-.pcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.pcard::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,12,16,.9) 0%,rgba(10,12,16,.45) 40%,rgba(10,12,16,0) 70%)}
-.pcard>span{position:relative;z-index:2;display:block}
-.pcard small{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#ffc477}
-.pcard b{display:block;font-family:"BC";font-weight:800;text-transform:uppercase;font-size:clamp(24px,2vw,32px);line-height:.95;margin-top:5px}
-.pcard em{display:inline-block;font-style:normal;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:12px;padding-bottom:3px;border-bottom:1.5px solid var(--laranja)}
-.pcard.cta{background:var(--laranja);justify-content:center}
-.pcard.cta::after{display:none}
-.pcard.cta small{color:#fff}
-.pcard.cta em{border-color:#fff}
-.pcard.cta p{position:relative;z-index:2;font-size:15px;line-height:1.45;margin-top:10px}
+/* 02 DESTINOS */
+.dest-t{padding:clamp(40px,5vw,80px) 0 clamp(70px,7vw,110px)}
+.painel{position:sticky;top:0;height:92vh;height:92svh;min-height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:var(--fundo)}
+.painel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.painel::after{content:"";position:absolute;inset:0;background:rgba(12,12,14,.3)}
+.painel>div{position:relative;z-index:2;padding:0 24px;max-width:760px}
+.painel small{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+.painel h3{font-family:"YS",serif;font-weight:400;font-size:clamp(40px,5vw,78px);line-height:1.1;margin:10px 0 12px;text-shadow:0 4px 30px rgba(12,12,14,.4)}
+.painel p{font-size:16px;font-weight:500;max-width:40ch;margin:0 auto 28px;text-shadow:0 2px 14px rgba(12,12,14,.5)}
+.cont{position:absolute;z-index:2;bottom:34px;left:0;right:0;display:flex;justify-content:center;gap:14px}
+.cont i{width:7px;height:7px;background:rgba(255,255,255,.55)}
+.cont i.on{background:var(--verm)}
 
-/* DIA (linha do tempo) */
-.dia{position:relative;z-index:7;background:var(--papel);padding:clamp(110px,12vw,180px) 0;border-radius:44px 44px 0 0;margin-top:-44px}
-.dia .tit{margin-bottom:clamp(60px,7vw,100px)}
-.linha{position:relative;max-width:1080px;margin:0 auto}
-.linha .eixo{position:absolute;left:50%;top:0;bottom:0;width:3px;margin-left:-1.5px;background:var(--linha)}
-.linha .eixo i{position:absolute;inset:0;background:var(--laranja);transform-origin:top;transform:scaleY(0)}
-.passo{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(50px,8vw,120px);align-items:center;margin-bottom:clamp(60px,7vw,100px)}
-.passo:last-child{margin-bottom:0}
-.passo .ponto{position:absolute;left:50%;top:50%;width:20px;height:20px;margin:-10px 0 0 -10px;background:var(--laranja);border:4px solid var(--papel);box-shadow:0 0 0 2px var(--laranja);z-index:2}
-.passo .img{overflow:hidden;aspect-ratio:4/3.2}
-.passo .img img{width:100%;height:100%;object-fit:cover}
-.passo .tx b{font-family:"BC";font-weight:800;font-size:64px;line-height:1;color:var(--laranja);display:block}
-.passo .tx h3{font-size:clamp(34px,3.2vw,48px);margin:8px 0 12px;color:var(--noite)}
-.passo .tx p{color:var(--muted);max-width:40ch}
-.passo:nth-child(odd of .passo) .img{order:2}
-.passo:nth-child(odd of .passo) .tx{text-align:right;justify-self:end}
-.passo:nth-child(odd of .passo) .tx p{margin-left:auto}
+/* 03 COMO RESERVAR */
+.res{position:relative;z-index:6;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:var(--fundo);color:#fff;padding:clamp(100px,12vh,150px) clamp(22px,7vw,110px)}
+.res-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:80% 50%}
+.res::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(12,12,14,.93) 0%,rgba(12,12,14,.72) 34%,rgba(12,12,14,0) 60%)}
+.res-t{position:relative;z-index:2;max-width:500px}
+.res-t .k{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#ffb35c}
+.res-t h2{font-family:"YS",serif;font-weight:400;font-size:clamp(36px,4.2vw,64px);line-height:1.1;margin:14px 0 30px}
+.passos{list-style:none;margin-bottom:36px}
+.passos li{display:grid;grid-template-columns:54px 1fr;align-items:baseline;padding:18px 0;border-top:1px solid rgba(255,255,255,.22)}
+.passos li:last-child{border-bottom:1px solid rgba(255,255,255,.22)}
+.passos b{font-family:"YS",serif;font-weight:400;font-size:22px;color:#ffb35c}
+.passos span{font-size:16px;font-weight:500}
+.passos em{display:block;font-style:normal;font-size:13.5px;font-weight:400;opacity:.75;margin-top:2px}
 
-/* DO QUE VOCÊ PRECISA */
-.pas{position:relative;background:#fff;padding:clamp(100px,11vw,160px) 0}
-.faixas{max-width:1080px;margin:clamp(56px,6vw,90px) auto 0;display:grid;gap:22px}
-.faixa{position:relative;height:clamp(220px,19vw,280px);overflow:hidden;display:flex;align-items:center;padding-left:9%;color:#fff;background:var(--noite)}
+/* 04 AVALIAÇÕES */
+.aval{position:relative;z-index:6;background:var(--bg);padding:clamp(100px,11vw,170px) 24px clamp(90px,9vw,140px)}
+.nota{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:26px;position:relative;color:var(--muted);font-size:13.5px}
+.nota svg{width:38px;height:38px}
+.nota b{font-family:"YS",serif;font-weight:400;font-size:40px;color:var(--tinta);line-height:1}
+.est{color:#F5B301;letter-spacing:2px;font-size:17px;display:block;line-height:1.2}
+.deps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,34px);max-width:1120px;margin:clamp(50px,5vw,80px) auto 0}
+.dep{background:#fff;box-shadow:0 14px 44px rgba(20,40,60,.08);padding:30px 28px}
+.dep-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:15px}
+.dep-top b{display:block;font-size:14px;font-weight:600;line-height:1.3}
+.dep-top small{font-size:12px;color:var(--muted)}
+.dep-top svg{margin-left:auto;width:22px;height:22px}
+.dep p{font-size:14.5px;margin-top:10px}
+
+/* 05 PASSEIOS */
+.pas{position:relative;z-index:6;background:#fafafa;padding:clamp(90px,10vw,160px) 24px clamp(100px,10vw,160px)}
+.faixas{max-width:1000px;margin:clamp(60px,6vw,96px) auto 0;display:grid;gap:26px}
+.faixa{position:relative;height:clamp(190px,17vw,250px);overflow:hidden;display:flex;align-items:center;justify-content:flex-start;padding-left:11%;color:#fff;background:var(--fundo)}
 .faixa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.faixa::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,12,16,.82),rgba(10,12,16,.2));transition:background .4s}
-.faixa:hover::after{background:linear-gradient(90deg,rgba(10,12,16,.7),rgba(10,12,16,.1))}
-.faixa .mk{position:relative;z-index:2;max-width:60%}
-.faixa .mk small{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#ffc477}
-.faixa .mk b{display:block;font-family:"BC";font-weight:800;text-transform:uppercase;font-size:clamp(36px,3.6vw,54px);line-height:.95;margin:8px 0 10px}
-.faixa .mk em{display:block;font-style:normal;font-size:17px;font-weight:500;opacity:.95}
-.faixa .ir{position:absolute;z-index:2;right:22px;bottom:22px;padding:14px 20px;background:var(--laranja);color:#fff;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.faixa::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,12,14,.62),rgba(12,12,14,.15));transition:background .4s}
+.faixa:hover::after{background:rgba(12,12,14,.4)}
+.faixa .mk{position:relative;z-index:2;text-align:left;line-height:1.1;max-width:62%}
+.faixa .mk em{display:block;margin-top:10px;font-style:normal;font-weight:500;font-size:clamp(14px,1.25vw,17px);line-height:1.4;opacity:.95;text-shadow:0 2px 14px rgba(12,12,14,.6)}
+.faixa .mk b{display:block;margin-top:8px;font-weight:700;font-size:clamp(22px,2.2vw,32px);text-shadow:0 3px 24px rgba(12,12,14,.5)}
+.faixa .mk small{font-size:clamp(11px,1.1vw,15px);font-weight:700;letter-spacing:.16em}
+.faixa:nth-child(1) .mk small{color:#ffd24a}.faixa:nth-child(2) .mk small{color:#ff5a72}
+.faixa .ir{position:absolute;z-index:2;right:22px;bottom:20px;padding:12px 18px;background:#fff;color:#141518;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+
+/* FINAL + RODAPÉ */
+.final{position:relative;z-index:6;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:var(--rod);color:#fff}
+.final-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.final::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,var(--rod) 16%,rgba(40,49,55,0) 46%)}
+.final-t{position:relative;z-index:2;text-align:center;padding:clamp(120px,17vh,190px) 24px 40px}
+.final-t .k{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase}
+.final-t h2{font-family:"YS",serif;font-weight:400;font-size:clamp(38px,4.8vw,74px);line-height:1.1;margin:14px auto 16px;max-width:16ch;text-shadow:0 4px 30px rgba(10,20,30,.35)}
+.final-t p{font-size:16px;font-weight:500;max-width:42ch;margin:0 auto 30px;text-shadow:0 2px 14px rgba(10,20,30,.4)}
+footer{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;max-width:1000px;width:100%;margin:0 auto;padding:40px 24px 54px;font-size:13px;line-height:1.9;color:rgba(255,255,255,.82)}
+footer h4{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#fff;margin-bottom:12px}
+footer .logo{align-items:flex-start;padding:0;margin-bottom:14px;color:#fff}
+footer .logo span{font-size:22px}
+footer .c{text-align:center}footer .d{text-align:right}
+
+.zap{position:fixed;right:26px;bottom:26px;z-index:60;width:56px;height:56px;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.zap svg{width:28px;height:28px;fill:#fff}
+
+/* CELULAR */
+@media (max-width:900px){
+  nav{grid-template-columns:1fr;justify-items:center;padding:18px}
+  .nl{display:none}
+  .logo{padding:0}.logo span{font-size:24px}
+  .capa{height:190vw}
+  .capa-img{top:0;height:100%;object-position:50% 0}
+  .pino{top:49vw;left:51%}
+  .pino u{width:26px}.pino .btn{padding:10px 14px;font-size:9px}
+  .capa-t{top:62vw}
+  .sobre-t{font-size:9.5px;letter-spacing:.14em;gap:10px}
+  .sobre-t::before,.sobre-t::after{width:22px}
+  .capa h1{font-size:12.2vw;margin-top:6px}
+  .tit h2{font-size:27px}
+  .pq{margin-top:-52vw}
+  .cards{grid-template-columns:1fr;max-width:420px;gap:22px;margin-top:70px}
+  .painel{height:86svh}
+  .painel p{font-size:15px}
+  .res{display:block;padding:0 0 70px;min-height:0;text-align:center}
+  .res-img{position:relative;height:52svh;object-position:76% 50%}
+  .res::before{background:linear-gradient(0deg,var(--fundo) 0%,rgba(11,53,80,0) 24%);height:52svh;bottom:auto}
+  .res-t{max-width:none;padding:0 22px;margin-top:-14px}
+  .passos{text-align:left}
+  .deps{grid-template-columns:1fr;max-width:440px}
+  .faixa{height:auto;min-height:250px;padding:26px 22px 84px;align-items:flex-start}.faixa .mk{max-width:100%}.faixa .ir{left:22px;right:auto}
+  .final-t{padding-top:110px}
+  footer{grid-template-columns:1fr;text-align:center;gap:26px}
+  footer .logo{align-items:center}footer .d{text-align:center}
+  .zap{right:16px;bottom:16px;width:50px;height:50px}
+}
+.logo.mcz{flex-direction:row;align-items:center;gap:11px}
+.logo.mcz img{width:74px;height:auto;border-radius:0;object-fit:contain}
+.logo.mcz .lt{display:block;line-height:1.1;text-align:left}
+.logo.mcz b{display:block;font-weight:700;font-size:17px;letter-spacing:.02em}
+.logo.mcz small{margin-top:4px;display:block;font-size:8.5px}
+.gente{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,20px);max-width:1120px;margin:clamp(40px,4vw,64px) auto 0}
+.gente img{width:100%;aspect-ratio:4/5;object-fit:cover}
+@media (max-width:900px){.gente{grid-template-columns:repeat(2,1fr);max-width:440px}}
 
 /* RESORTS */
-.rst{position:relative;background:#fff;padding:0 0 clamp(110px,11vw,170px)}
-.rgrid{margin-top:clamp(50px,5vw,80px)}
-.rcard{position:relative;overflow:hidden;background:var(--noite);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:22px 20px;cursor:pointer}
+.rst{position:relative;z-index:6;background:var(--bg);padding:clamp(100px,11vw,170px) 24px clamp(40px,4vw,60px)}
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,22px);max-width:1120px;margin:clamp(50px,5vw,80px) auto 0}
+.rcard{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--fundo);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:22px 20px}
 .rcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.rcard::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,12,16,.92) 0%,rgba(10,12,16,.5) 40%,rgba(10,12,16,0) 72%)}
+.rcard::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,12,14,.92) 0%,rgba(12,12,14,.6) 40%,rgba(12,12,14,0) 72%);transition:background .4s}
+.rcard:hover::after{background:linear-gradient(0deg,rgba(12,12,14,.92) 0%,rgba(12,12,14,.5) 55%,rgba(12,12,14,.1) 100%)}
 .rcard>span{position:relative;z-index:2;display:block}
-.rcard small{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#ffc477}
-.rcard b{display:block;font-family:"BC";font-weight:800;text-transform:uppercase;font-size:clamp(28px,2.4vw,36px);line-height:.95;margin-top:6px}
-.rcard em{display:inline-block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:14px;padding-bottom:3px;border-bottom:1.5px solid var(--laranja)}
-.rcard.cta{background:var(--laranja);justify-content:center;padding:28px clamp(22px,4vw,56px)}
-.rcard.cta b{font-size:clamp(32px,3vw,46px)}
+.rcard small{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#ffd24a;text-shadow:0 1px 8px rgba(12,12,14,.6)}
+.rcard b{display:block;font-family:"YS",serif;font-weight:400;font-size:clamp(22px,1.9vw,28px);line-height:1.15;margin-top:6px}
+.rcard em{display:inline-block;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-top:14px;padding-bottom:3px;border-bottom:1px solid rgba(255,255,255,.6)}
+.rcard.cta{background:var(--azul);justify-content:center;text-align:left}
 .rcard.cta::after{display:none}
-.rcard.cta p{position:relative;z-index:2;font-size:16px;line-height:1.5;opacity:.92;margin-top:12px}
+.rcard.cta b{font-size:clamp(24px,2.1vw,31px)}
+.rcard.cta p{position:relative;z-index:2;font-size:14px;line-height:1.55;opacity:.92;margin-top:12px}
+@media (max-width:900px){.rgrid{grid-template-columns:repeat(2,1fr);max-width:480px;gap:10px}.rcard{padding:16px 14px}.rcard b{font-size:20px}.rcard small{font-size:9px;letter-spacing:.14em}.rcard em{font-size:10px;margin-top:10px}.rcard:first-child{grid-column:1/-1;aspect-ratio:16/11}.rcard.cta{grid-column:1/-1;aspect-ratio:auto;padding:28px 24px}.rcard.cta b{font-size:24px}.rcard.cta p{font-size:14px}}
 
-/* MONTE SEU ROTEIRO (modelo Agnaldo) */
-.res{position:relative;padding:clamp(100px,11vw,150px) 0;color:#fff;overflow:hidden;background:var(--noite)}
-.res-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%}
-.res::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(10,12,16,.94) 0%,rgba(10,12,16,.76) 36%,rgba(10,12,16,0) 64%)}
-.res .wrap{position:relative;z-index:2}
-.res-t{max-width:580px}
-.res-t .k{color:#ffb75a}
-.res-t h2{font-size:clamp(54px,6vw,100px);margin:14px 0 14px}
-.res-t>p{color:rgba(255,255,255,.88);margin-bottom:30px;max-width:44ch}
-.orc{display:grid;grid-template-columns:1fr 1fr;gap:16px 14px;background:#fff;color:var(--tinta);padding:28px}
+
+.logo.lg{flex-direction:row;align-items:center;gap:12px}
+.logo.lg img{height:52px;width:auto;object-fit:contain}
+.logo.lg img.chip{background:#fff;padding:5px 7px;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.logo.lg img.circ{width:54px;height:54px;border-radius:50%}
+.logo.lg img.dark{border-radius:5px;height:46px}
+.logo.lg .lt{display:block;line-height:1.1;text-align:left}
+.logo.lg b{display:block;font-weight:700;font-size:17px;letter-spacing:.02em}
+.logo.lg small{margin-top:4px;display:block;font-size:8.5px}
+.logo.lg i.dot{width:30px;height:30px;border-radius:50%;background:conic-gradient(from 210deg,#ff9a2e,#e07a0c,#ff9a2e);display:block;position:relative;flex:none}
+.logo.lg i.dot::after{content:"";position:absolute;inset:8px 8px 9px 9px;border-radius:50%;background:#fff;opacity:.9}
+footer .logo.lg{align-items:center;padding:0;margin-bottom:14px}
+.painel .tb{font-size:13px;font-weight:600;opacity:.92;margin:-10px auto 24px;text-shadow:0 2px 14px rgba(12,12,14,.5)}
+.logo.lg img.wide{height:50px}.logo.lg img.tall{height:82px}.logo.lg.only img.circ{width:68px;height:68px}
+.logo.lg img.lg-d{display:none}nav.solid .logo.lg img.lg-l{display:none}nav.solid .logo.lg img.lg-d{display:block}
+nav.solid .logo.lg img.wide{height:42px}nav.solid .logo.lg img.tall{height:52px}nav.solid .logo.lg.only img.circ{width:54px;height:54px}
+nav::before{content:"";position:absolute;left:0;right:0;top:0;height:170px;z-index:-1;background:radial-gradient(ellipse 360px 120px at 50% 48px,rgba(12,12,14,.72),rgba(12,12,14,0)),linear-gradient(180deg,rgba(12,12,14,.5),rgba(12,12,14,0));pointer-events:none;transition:opacity .4s}nav.solid::before{opacity:0}
+nav:not(.solid) .logo.lg img{filter:drop-shadow(0 2px 8px rgba(2,18,32,.85))}
+footer .logo.lg img.wide{height:56px}footer .logo.lg img.tall{height:84px}footer .logo.lg.only img.circ{width:84px;height:84px}
+
+.orc{text-align:left;display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;background:rgba(255,255,255,.96);color:var(--tinta);padding:26px;margin-top:6px;box-shadow:0 20px 60px rgba(12,12,14,.35)}
+.orc label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;letter-spacing:.02em}
 .orc .full{grid-column:1/-1}
-.orc [hidden]{display:none}
-.orc>*,.orc label,.orc .campo{min-width:0}
-.orc label,.orc .campo{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--noite)}
-.orc input,.orc select,.orc .dt{font:inherit;font-size:16px;font-weight:500;letter-spacing:0;text-transform:none;padding:13px 12px;border:1px solid #cfd3da;border-radius:0;background:#fff;color:var(--tinta);width:100%;text-align:left;-webkit-appearance:none;appearance:none}
-.orc select{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230b1d4f' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:36px}
-.orc .dt{cursor:pointer}
-.orc .dt.vazio{color:#8a909c}
-.orc input:focus,.orc select:focus,.orc .dt:focus{outline:2px solid var(--azul);outline-offset:-1px}
-.orc .dica{font-style:normal;font-size:12.5px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--muted)}
-.orc .err{font-size:12.5px;font-weight:600;letter-spacing:0;text-transform:none;color:#c92a2a}
+.orc .campo{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;letter-spacing:.02em}
+.orc .dt{font:inherit;font-size:16px;font-weight:500;padding:13px 12px;border:1px solid #d9d4ce;background:#fff;color:var(--tinta);text-align:left;cursor:pointer;width:100%;letter-spacing:0}
+.orc .dt.vazio{color:#8a9298}
+.orc .dt:focus{outline:2px solid #ff9a2e;border-color:#ff9a2e}
+.orc .err{font-size:12.5px;font-weight:600;color:var(--verm);letter-spacing:0}
 .orc .err:empty{display:none}
-.orc .inv input,.orc .inv select,.orc .inv .dt{border-color:#c92a2a}
-.orc .btn{margin-top:4px;width:100%}
-.orc small{font-size:13.5px;color:var(--muted);text-align:center}
-.cal-bg{position:fixed;inset:0;z-index:90;background:rgba(10,12,16,.6);display:flex;align-items:center;justify-content:center;padding:20px}
+.orc .inv input,.orc .inv select,.orc .inv .dt{border-color:var(--verm);outline:1px solid var(--verm)}
+.orc [hidden]{display:none}
+.cal-bg{position:fixed;inset:0;z-index:200;background:rgba(12,12,14,.55);display:flex;align-items:center;justify-content:center;padding:16px}
 .cal-bg[hidden]{display:none}
 .cal{background:#fff;color:var(--tinta);width:100%;max-width:360px;padding:18px 16px 14px;box-shadow:0 24px 70px rgba(0,0,0,.35)}
 .cal-t{margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center}
 .cal-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
 .cal-h b{font-size:17px;font-weight:700}
-.cal-h button{width:42px;height:42px;border:1px solid #cfd3da;background:#fff;font-size:22px;line-height:1;cursor:pointer;color:var(--tinta)}
+.cal-h button{width:42px;height:42px;border:1px solid #d9d4ce;background:#fff;font-size:22px;line-height:1;cursor:pointer;color:var(--tinta)}
 .cal-h button:disabled{opacity:.25;cursor:default}
 .cal-w,.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
 .cal-w span{font-size:12px;font-weight:700;color:var(--muted);padding:4px 0}
-.cal-g button{aspect-ratio:1;border:0;background:#f1f2f5;font:inherit;font-size:15px;font-weight:600;color:var(--tinta);cursor:pointer}
-.cal-g button:hover:not(:disabled){background:#dde4f7}
-.cal-g button:disabled{background:none;color:#c3c7ce;text-decoration:line-through;cursor:not-allowed}
-.cal-g button.hj{box-shadow:inset 0 0 0 2px var(--laranja)}
-.cal-g button.meio{background:#dde4f7}
+.cal-g button{aspect-ratio:1;border:0;background:#f1f4f6;font:inherit;font-size:15px;font-weight:600;color:var(--tinta);cursor:pointer}
+.cal-g button:hover:not(:disabled){background:#fde3c4}
+.cal-g button:disabled{background:none;color:#c3c9cd;text-decoration:line-through;cursor:not-allowed}
+.cal-g button.hj{box-shadow:inset 0 0 0 2px #ff9a2e}
+.cal-g button.meio{background:#fde3c4}
 .cal-g button.ida,.cal-g button.volta{background:var(--azul);color:#fff}
 .cal-f{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
-.cal-f button{font:inherit;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:11px 16px;border:1px solid #cfd3da;background:#fff;color:var(--tinta);cursor:pointer}
+.cal-f button{font:inherit;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:11px 16px;border:1px solid #d9d4ce;background:#fff;color:var(--tinta);cursor:pointer}
 .cal-f .cal-so{margin-right:auto}
 html.cal-on{overflow:hidden}
+.orc .dica{font-style:normal;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:0}
+.orc input,.orc select{font:inherit;font-size:16px;font-weight:500;padding:13px 12px;border:1px solid #d9d4ce;border-radius:0;background:#fff;color:var(--tinta);width:100%}
+.orc input:focus,.orc select:focus{outline:2px solid #ff9a2e;border-color:#ff9a2e}
+.orc .btn{border:0;cursor:pointer;margin-top:4px}
+.orc small{font-size:13px;color:var(--muted);text-align:center}
+@media(max-width:760px){.orc{grid-template-columns:1fr;padding:20px}}
 
-/* AVALIAÇÕES */
-.aval{position:relative;z-index:2;background:#fff;padding:clamp(110px,12vw,170px) 0;border-radius:44px 44px 0 0;margin-top:-44px}
-.aval-h{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:clamp(44px,5vw,70px)}
-.aval h2{font-size:clamp(50px,5.6vw,92px);color:var(--noite);margin-top:14px;max-width:11ch}
-.nota{display:flex;align-items:center;gap:16px;padding:18px 0;border-top:1.5px solid var(--linha);border-bottom:1.5px solid var(--linha)}
-.nota svg{width:40px;height:40px}
-.nota b{font-family:"BC";font-weight:800;font-size:58px;line-height:1;color:var(--noite)}
-.nota small{display:block;color:var(--muted);font-size:14.5px;line-height:1.35}
-.mural{columns:3;column-gap:20px}
-.mural>*{break-inside:avoid;margin-bottom:20px}
-.dep{background:var(--papel);padding:28px 26px 24px}
-.dep-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.dep-top svg{width:20px;height:20px}
-.dep p{font-size:17px;line-height:1.6;margin-bottom:20px}
-.dep .quem-av{display:flex;align-items:center;gap:12px}
-.dep .av{width:40px;height:40px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:16px}
-.dep .quem-av b{display:block;font-size:16px;line-height:1.2}
-.dep .quem-av small{color:var(--muted);font-size:13.5px}
-.mfoto{position:relative}
-.mfoto img{width:100%}
-.mfoto figcaption{position:absolute;left:0;bottom:0;background:var(--noite);color:#fff;padding:8px 14px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+body{font-size:17px}
+.btn{font-size:13px}
+.nl{font-size:13px}
+.card h3{font-size:16px}.card p{font-size:16px;line-height:1.65}
+.painel small{font-size:13px}.painel p{font-size:19px;max-width:42ch}
+.passos span{font-size:18px}.passos em{font-size:15.5px}
+.res-t .k,.final-t .k{font-size:13px}
+.dep-top b{font-size:16px}.dep-top small{font-size:13.5px}.dep p{font-size:16.5px;line-height:1.65}
+.nota{font-size:15.5px}
+.faixa .mk em{font-size:clamp(16px,1.4vw,19px)}.faixa .mk small{font-size:clamp(12px,1.2vw,16px)}.faixa .ir{font-size:13.5px}
+.final-t p{font-size:19px}
+footer{font-size:15px}footer h4{font-size:14.5px}
+.res-t{max-width:560px}
+@media(max-width:760px){.painel p{font-size:17px}.card p{font-size:16px}.pino .btn{font-size:9px;padding:7px 11px;letter-spacing:.1em;white-space:nowrap}.pino u{width:18px}}
 
-/* FINAL + RODAPÉ sobre a foto */
-.final{position:relative;color:#fff;overflow:hidden;background:var(--noite)}
-.final .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
-.final::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,12,16,.15) 0%,rgba(10,12,16,.3) 40%,rgba(10,12,16,.92) 78%)}
-.final .wrap{position:relative;z-index:2}
-.final .cta{min-height:88vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:140px 0 60px}
-.final .k{color:#ffb75a}
-.final h2{font-size:clamp(64px,9vw,160px);max-width:9ch;margin:16px 0 22px;text-shadow:0 4px 30px rgba(0,0,0,.25)}
-.final h2 em{font-style:normal;color:var(--laranja)}
-.final .cta p{font-size:20px;max-width:40ch;margin-bottom:34px}
-footer{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding:56px 0 34px;border-top:1px solid rgba(255,255,255,.25);font-size:15.5px;color:rgba(255,255,255,.85)}
-footer img{height:120px;width:auto;margin-bottom:14px}
-footer h4{font-family:"BC";font-weight:700;font-size:20px;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:10px}
-footer a:hover{color:#fff;text-decoration:underline}
-footer .base{grid-column:1/-1;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);font-size:13.5px;opacity:.7;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-
-.zap{position:fixed;right:20px;bottom:20px;z-index:70;width:60px;height:60px;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 28px -10px rgba(0,0,0,.5)}
-.zap svg{width:32px;height:32px;color:#fff}
-
-/* CELULAR */
-@media(max-width:900px){
-  body{font-size:17px}
-  #nav nav{display:none}
-  #nav .btn{margin-left:auto;padding:12px 16px;font-size:12px}
-  #nav .lg img{height:66px}
-  .hero .wrap{flex-direction:column;align-items:center;text-align:center;bottom:40px}
-  .hero .bg{object-position:55% 50%}
-  .hero h1{font-size:clamp(46px,12.6vw,66px);max-width:none}
-  .hero .lado{align-items:center;padding:0}
-  .hero .bts{flex-direction:column;align-items:stretch;width:100%;max-width:340px;gap:10px}
-  .hero .bts .btn{padding:16px 18px}
-  .bora{justify-content:center;margin-top:16px}
-  .tit h2{font-size:clamp(44px,11.5vw,64px)}
-  .quem{padding:90px 0}
-  .quem .wrap{grid-template-columns:1fr;text-align:center}
-  .sol{max-width:400px}
-  .quem h2{font-size:clamp(50px,14vw,72px)}
-  .quem p{margin-left:auto;margin-right:auto}
-  .nums{gap:8px}
-  .num{padding:14px 8px;text-align:center}
-  .num .ic{justify-content:center;margin-bottom:8px}
-  .num .ic .est{font-size:13px;gap:0}
-  .num b{font-size:40px}
-  .num>span{font-size:12.5px}
-  .dest-t{padding:90px 0 50px}
-  .camada .wrap{flex-direction:column;align-items:center;text-align:center;gap:0}
-  .camada h3{font-size:clamp(56px,16vw,88px)}
-  .camada img{object-position:var(--mp,50% 50%)}
-  .camada .lado{max-width:none}
-  .camada p{font-size:16.5px}
-  .todos{padding:70px 0 90px}
-  .todos-h{flex-direction:column;align-items:center;text-align:center;gap:10px}
-  .pgrid,.rgrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:minmax(170px,auto);gap:10px}
-  .pcard{padding:14px 12px}
-  .pcard b{font-size:24px}
-  .g b{font-size:40px!important}
-  .dia{border-radius:28px 28px 0 0;margin-top:-28px;padding:90px 0}
-  .linha .eixo{left:16px}
-  .passo{grid-template-columns:1fr;gap:20px;padding-left:44px}
-  .passo .ponto{left:16px;top:22px}
-  .passo:nth-child(odd of .passo) .img{order:0}
-  .passo:nth-child(odd of .passo) .tx{text-align:left;justify-self:start}
-  .passo:nth-child(odd of .passo) .tx p{margin-left:0}
-  .passo .tx b{font-size:52px}
-  .pas{padding:90px 0}
-  .faixa{height:auto;min-height:260px;padding:26px 22px 86px;align-items:flex-start}
-  .faixa .mk{max-width:100%}
-  .faixa .ir{left:22px;right:auto}
-  .rst{padding-bottom:90px}
-  .rcard{padding:16px 14px}
-  .rcard b{font-size:24px}
-  .rcard small{font-size:10.5px;letter-spacing:.12em}
-  .rcard.cta{padding:24px 20px}
-  .res{padding:0 0 70px;background:#fff;color:var(--tinta)}
-  .res-t .k{color:var(--brasa)}
-  .res-t>p{color:var(--muted)}
-  .orc{box-shadow:0 0 0 1px var(--linha)}
-  .res-img{position:relative;height:60vw;min-height:240px;object-position:50% 50%}
-  .res::before{background:linear-gradient(180deg,rgba(255,255,255,0) 0,rgba(255,255,255,0) 26%,#fff 38%)}
-  .res-t{margin:0 auto;text-align:center;padding-top:20px}
-  .res-t>p{margin:0 auto 26px}
-  .res-t h2{font-size:clamp(50px,14vw,72px)}
-  .orc{grid-template-columns:minmax(0,1fr);padding:20px;text-align:left}
-  .res-t{width:100%}
-  .aval{border-radius:28px 28px 0 0;margin-top:-28px;padding:90px 0}
-  .aval-h{flex-direction:column;align-items:center;text-align:center}
-  .aval h2{font-size:clamp(48px,13vw,68px)}
-  .mural{columns:1}
-  .final .cta{min-height:80vh;align-items:center;text-align:center;padding:120px 0 50px}
-  .final h2{font-size:clamp(60px,17vw,92px)}
-  footer{grid-template-columns:1fr;text-align:center;justify-items:center;gap:26px}
-  footer>*{min-width:0;max-width:100%}
-  footer .base{flex-direction:column;align-items:center;gap:6px;text-align:center}
-}
-@media(min-width:901px) and (max-width:1150px){.mural{columns:2}}
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute">
-  <symbol id="wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.8-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9C5.1 10 10 5.2 16 5.2S26.9 10 26.9 15.8 22 26.4 16 26.4zm6-7.9c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.3 3.6 5.7 4.9 2.8 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></symbol>
-  <symbol id="g" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></symbol>
-</svg>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="g" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.300-.1-2.600-.4-3.900z"/><path fill="#FF3D00" d="M6.300 14.700l6.600 4.800C14.700 15.100 19 12 24 12c3.100 0 5.800 1.200 8 3l5.700-5.700C34 6.100 29.300 4 24 4 16.300 4 9.700 8.300 6.300 14.700z"/><path fill="#4CAF50" d="M24 44c5.200 0 9.900-2 13.400-5.200l-6.200-5.200c-2 1.500-4.500 2.400-7.200 2.400-5.200 0-9.600-3.300-11.300-7.900l-6.500 5C9.500 39.600 16.200 44 24 44z"/><path fill="#1976D2" d="M43.600 20.100H42V20H24v8h11.300c-.8 2.200-2.200 4.200-4.100 5.600l6.200 5.200C37 39.200 44 34 44 24c0-1.300-.1-2.600-.4-3.900z"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm5.300 14.100c-.2.600-1.300 1.200-1.800 1.200s-1 .2-3.400-.7a11.800 11.800 0 0 1-4.600-4.100c-.5-.7-1.100-1.800-1.100-2.800s.5-1.600.8-1.900c.2-.2.4-.3.600-.3h.4c.2 0 .4 0 .6.500l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6a8.700 8.700 0 0 0 4.100 3.600c.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.900.9c.3.1.5.2.5.3.1.2.1.7-.1 1.400z"/></symbol>
+</defs></svg>
 
-<header id="nav">
-  <div class="wrap">
-    <a class="lg" href="#topo" aria-label="Neto Passeios Alagoas"><img loading="lazy" decoding="async" src="logo.png" alt="Neto Passeios Alagoas"></a>
-    <nav><a href="#quem">Quem é o Neto</a><a href="#servicos">Transfer</a><a href="#roteiros">Passeios</a><a href="#avaliacoes">Avaliações</a></nav>
-    <a class="btn" href="#reservar">Montar roteiro</a>
+<nav id="nav">
+  <div class="nl"><span class="lang"><b>PT</b> | EN</span><a href="#porque">Sobre</a><a href="#destinos">Destinos</a><a href="#servicos">Serviços</a></div>
+  <a class="logo lg only" href="#topo"><img class="wide lg-l" src="logo.png" alt="Transfer Alagoas"><img class="wide lg-d" src="logo-escura.png" alt="Transfer Alagoas"></a>
+  <div class="nl r"><a href="#reservar">Como reservar</a><a href="#avaliacoes">Avaliações</a><a href="#contato">Contato</a></div>
+</nav>
+
+<header class="capa" id="topo">
+  <img class="capa-img" id="capaImg" src="capa.jpg" alt="" style="object-position:50% 50%">
+  <div class="pino fade"><i></i><u></u><a class="btn" href="#destinos">Ver os destinos</a></div>
+  <div class="capa-t">
+    <div class="sobre-t fade">Transfer privativo no Aeroporto de Maceió · 24 horas</div>
+    <h1 class="ys split">Seu destino começa aqui</h1>
   </div>
 </header>
 
-<section class="hero" id="topo">
-  <picture>
-    <img decoding="async" class="bg" id="heroImg" fetchpriority="high" src="capa.jpg" alt="Jangada no mar azul de Alagoas vista de cima">
-  </picture>
-  <div class="wrap">
-    <div class="esq"><h1 class="split" id="heroTit">Alagoas do seu jeito, com <em>quem conhece.</em></h1>
-    <div class="bora h-fade">Bora pro <span class="slot" id="slot"><b>Gunga</b><b>Francês</b><b>Milagres</b><b>Maragogi</b><b>Crôa</b><b>Cânions</b><b>Gunga</b></span></div></div>
-    <div class="lado">
-      <div class="bts h-fade"><a class="btn" href="#reservar">Montar meu roteiro</a><a class="btn lin" href="#reservar" data-pre="Transfer aeroporto ⇄ hotel">Transfer aeroporto ⇄ hotel</a></div>
-      <div class="g5 h-fade"><svg><use href="#g"/></svg><b>5,0</b><span class="est brilho"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><span>201 avaliações</span></div>
-    </div>
-  </div>
-  <div class="sombra" id="heroSombra"></div>
-</section>
-
-<section class="quem" id="quem">
-  <div class="wrap">
-    <div class="sol">
-      <div class="disco" id="disco"></div>
-      <div class="foto"><img loading="lazy" decoding="async" src="neto-frances.jpg" alt="O guia Neto com clientes no letreiro da Praia do Francês"></div>
-      <div class="tag">Praia do Francês<small>Neto com clientes</small></div>
-    </div>
-    <div>
-      <span class="k rv">Quem te leva</span>
-      <h2 class="split">Prazer, eu sou o <em>Neto.</em></h2>
-      <p class="rv">Sou guia de turismo em Maceió. Busco você no aeroporto e levo pro hotel, e levo pra conhecer Alagoas de carro privativo, no ritmo do seu grupo, contando a história de cada lugar pelo caminho.</p>
-      <p class="rv">Família com criança, casal, amigos ou grupo da melhor idade. Eu cuido do horário certo da maré e indico o restaurante que só quem é daqui conhece.</p>
-      <div class="nums rv">
-        <div class="num"><div class="ic"><svg><use href="#g"/></svg></div><b>201</b><span>avaliações no Google</span></div>
-        <div class="num gg"><div class="ic"><span class="est brilho"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span></div><b>5,0</b><span>de nota, todas 5 estrelas</span></div>
-        <div class="num wa"><div class="ic"><svg><use href="#wa"/></svg></div><b>24h</b><span>de atendimento no WhatsApp</span></div>
-      </div>
-    </div>
+<section class="pq" id="porque">
+  <div class="tit"><span class="n">01</span><h2 class="split">Por que ir com a Transfer Alagoas?</h2></div>
+  <div class="cards">
+<article class="card fade"><img src="card1.jpg" alt="" style="object-position:50% 50%"><div><h3>Esperando no desembarque</h3><p>A base é no Aeroporto Zumbi dos Palmares, com atendimento 24 horas. Você desembarca e o carro já está te esperando.</p></div></article>
+<article class="card fade"><img src="card2.jpg" alt="" style="object-position:50% 45%"><div><h3>Viagem com hora marcada</h3><p>Ida e volta combinadas pelo WhatsApp. A gente te deixa no hotel e já deixa certinho o horário de te buscar pro aeroporto.</p></div></article>
+<article class="card fade"><img src="card3.jpg" alt="" style="object-position:50% 50%"><div><h3>Conforto, segurança e pontualidade</h3><p>Mais de 13 anos em transporte executivo. Carro confortável, ar gelado e motorista que conhece Alagoas de ponta a ponta.</p></div></article>
   </div>
 </section>
 
-<section class="pas" id="servicos">
-  <div class="wrap">
-    <div class="tit"><span class="k rv">Serviços</span><h2 class="split">Do que você <em>precisa?</em></h2></div>
-    <div class="faixas">
-            <a class="faixa rv" href="#reservar" data-pre="Transfer aeroporto ⇄ hotel"><img loading="lazy" decoding="async" src="n-van.jpg" alt="Neto com um grupo de clientes na frente da van" style="object-position:50% 38%"><span class="mk"><small>Só transfer, sem passeio</small><b>Do aeroporto pro hotel e do hotel pro aeroporto</b><em>O Neto te espera no desembarque e leva na volta. Veículo só pro seu grupo, com espaço pras malas.</em></span><span class="ir">Quero o transfer →</span></a>
-      <a class="faixa rv" href="#reservar" data-pre="Roteiro com vários passeios"><img loading="lazy" decoding="async" src="buggy-dunas.jpg" alt="Buggys nas dunas de frente pro mar" style="object-position:50% 55%"><span class="mk"><small>Passeios privativos</small><b>Conheça Alagoas no seu ritmo</b><em>Maragogi, Milagres, Gunga e mais, só com o seu grupo e o Neto.</em></span><span class="ir">Quero um passeio →</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="dest" id="roteiros">
-  <div class="dest-t wrap"><div class="tit"><span class="k rv">Passeios</span><h2 class="split">Escolha pra onde <em>a gente vai.</em></h2><p class="rv">Do litoral norte ao Velho Chico, o Neto leva você pros lugares mais bonitos de Alagoas.</p></div></div>
-  <div class="palco" id="palco"></div>
-  <div class="todos wrap">
-    <div class="todos-h"><div><span class="k rv">Todos os passeios</span><h3 class="split">Pra onde o Neto <em>te leva</em></h3></div><p class="rv">Toca no passeio e ele já entra no seu orçamento.</p></div>
-    <div class="pgrid" id="pgrid"></div>
-  </div>
-</section>
-
-<section class="dia" id="dia">
-  <div class="wrap">
-    <div class="tit"><span class="k rv">Como funciona</span><h2 class="split">Um dia de passeio com o <em>Neto</em></h2><p class="rv">Sem van lotada e sem correria pra cumprir horário de grupo. O dia é de vocês.</p></div>
-    <div class="linha">
-      <div class="eixo"><i id="eixo"></i></div>
-      <div class="passo"><span class="ponto"></span><div class="img"><img loading="lazy" decoding="async" src="n-estrada.jpg" alt="Clientes do Neto na estrada entre coqueiros" style="object-position:50% 60%"></div><div class="tx"><b>01</b><h3>Ele busca vocês no hotel</h3><p>Carro privativo, ar gelado e espaço pras malas. Só o seu grupo e o Neto.</p></div></div>
-      <div class="passo"><span class="ponto"></span><div class="img"><img loading="lazy" decoding="async" src="gunga-mirante.jpg" alt="Mirante sobre o coqueiral e o mar no Gunga" style="object-position:50% 70%"></div><div class="tx"><b>02</b><h3>Pelo caminho, as histórias</h3><p>Cada cidade, cada mirante e cada curiosidade explicada por quem é daqui.</p></div></div>
-      <div class="passo"><span class="ponto"></span><div class="img"><img loading="lazy" decoding="async" src="n-caiaque.jpg" alt="Clientes do Neto no caiaque transparente, foto de drone" style="object-position:50% 45%"></div><div class="tx"><b>03</b><h3>Fotos lindas de todo mundo</h3><p>Ele conhece os melhores ângulos e faz questão de que ninguém fique de fora da foto.</p></div></div>
-      <div class="passo"><span class="ponto"></span><div class="img"><img loading="lazy" decoding="async" src="beach-club.jpg" alt="Mesas pé na areia num restaurante de praia"></div><div class="tx"><b>04</b><h3>Almoço com indicação de local</h3><p>Do beach club pé na areia ao restaurante caseiro que turista nenhum encontra sozinho.</p></div></div>
-      <div class="passo"><span class="ponto"></span><div class="img"><img loading="lazy" decoding="async" src="por-do-sol.jpg" alt="Casal no pôr do sol nas dunas" style="object-position:50% 40%"></div><div class="tx"><b>05</b><h3>A volta no ritmo de vocês</h3><p>Quer ficar mais um pouco pro pôr do sol? Tudo bem. O passeio flui no tempo do grupo.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="rst" id="resorts">
-  <div class="wrap">
-    <div class="tit"><span class="k rv">Transfer</span><h2 class="split">Os resorts que o Neto <em>atende</em></h2><p class="rv">Do aeroporto Zumbi dos Palmares direto pra recepção do seu resort, no carro só do seu grupo.</p></div>
-    <div class="rgrid" id="rgrid"></div>
-  </div>
+<section id="destinos">
+  <div class="tit dest-t"><span class="n">02</span><h2 class="split">Pra onde a gente te leva</h2></div>
+<div class="painel"><img src="painel1.jpg" alt="Salinas e os resorts de Ipioca" style="object-position:50% 50%"><div><small>Ipioca · litoral norte de Maceió</small><h3>Salinas e os resorts de Ipioca</h3><p>Do desembarque direto pra recepção do Salinas Maceió e dos resorts da praia de Ipioca.</p><a class="btn" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20um%20transfer%20do%20aeroporto%20pro%20meu%20resort%20em%20Ipioca."><svg><use href="#wa"/></svg>Cotar transfer pro meu resort</a></div></div>
+<div class="painel"><img src="painel2.jpg" alt="Praia do Francês" style="object-position:50% 50%"><div><small>Litoral sul · 30 min de Maceió</small><h3>Praia do Francês</h3><p>O Kanoa Beach Club e as barracas do Francês, com ida e volta no horário que você quiser.</p><a class="btn" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20uma%20ida%20pra%20Praia%20do%20Franc%C3%AAs."><svg><use href="#wa"/></svg>Cotar ida pro Francês</a></div></div>
+<div class="painel"><img src="painel3.jpg" alt="Maragogi" style="object-position:50% 50%"><div><small>Litoral norte · 2h30 de Maceió</small><h3>Maragogi</h3><p>As piscinas naturais mais famosas do Brasil. Saindo cedo, você chega na maré baixa.</p><a class="btn" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20um%20transfer%20pra%20Maragogi."><svg><use href="#wa"/></svg>Cotar transfer pra Maragogi</a></div></div>
+<div class="painel"><img src="painel4.jpg" alt="Recife e viagens longas" style="object-position:50% 60%"><div><small>Viagem com hora marcada</small><h3>Recife e viagens longas</h3><p>Aeroporto de Recife, Dunas de Marapé e qualquer distância: é só combinar o dia e a hora.</p><a class="btn" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20viagem%20com%20hora%20marcada."><svg><use href="#wa"/></svg>Agendar uma viagem</a></div></div>
 </section>
 
 <section class="res" id="reservar">
-  <img loading="lazy" decoding="async" class="res-img" src="d-milagres.jpg" alt="">
-  <div class="wrap">
+  <img class="res-img" src="reservar.jpg" alt="" style="object-position:80% 50%">
   <div class="res-t">
-    <span class="k rv">Orçamento sem compromisso</span>
-    <h2 class="split">Monte seu roteiro</h2>
-    <p class="rv">Conta pra onde quer ir, quando chega e quantas pessoas vão. O Neto responde com o roteiro e o valor certinho pro seu grupo.</p>
-    <form class="orc rv" id="orc" novalidate>
-      <label class="full">Pra onde você quer ir?<select name="dest"><option value="" disabled selected>Escolha uma opção</option><option value="Transfer aeroporto ⇄ hotel">Transfer aeroporto ⇄ hotel (ida e volta)</option></select><span class="err"></span></label>
-      <label class="full" id="orcOutro" hidden>Qual lugar?<input name="outro" type="text" maxlength="60" placeholder="Ex.: Japaratinga"><span class="err"></span></label>
-      <div class="campo"><span class="lbl">Chegada em Alagoas</span><button type="button" class="dt vazio" data-k="ida">Escolher data</button><span class="err"></span></div>
-      <div class="campo"><span class="lbl">Volta pra casa</span><button type="button" class="dt vazio" data-k="volta">Escolher data</button><em class="dica">Opcional, deixe em branco se não sabe</em><span class="err"></span></div>
-      <label>Quantas pessoas?<select name="pes"><option value="" disabled selected>Escolha</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>Mais de 12</option></select><span class="err"></span></label>
-      <label>Quem vai no grupo?<select name="grupo"><option value="">Opcional</option><option>Casal</option><option>Família com crianças</option><option>Grupo da melhor idade</option><option>Amigos</option><option>Viajo sozinho(a)</option></select></label>
-      <label class="full">Nome do hotel ou pousada<input name="hotel" type="text" maxlength="80" placeholder="Ex.: Pousada na Pajuçara"><em class="dica">Opcional, onde você vai se hospedar</em></label>
+    <span class="k fade">Como reservar</span>
+    <h2 class="split">Monte seu orçamento</h2>
+    <form class="orc fade" id="orc" novalidate>
+      <label class="full">Pra onde você quer ir?<select name="dest"><option value="" disabled selected>Escolha o destino</option><option>Aeroporto ↔ hotel em Maceió</option><option>Salinas e resorts de Ipioca</option><option>Praia do Francês</option><option>Praia do Gunga</option><option>Maragogi</option><option>São Miguel dos Milagres</option><option>Dunas de Marapé</option><option>Recife</option><option>Outro destino</option></select><span class="err"></span></label>
+      <label class="full" id="orcOutro" hidden>Qual destino?<input name="outro" type="text" maxlength="60" placeholder="Ex.: Porto de Galinhas"><span class="err"></span></label>
+      <div class="campo"><span class="lbl">Data da ida</span><button type="button" class="dt" data-k="ida">Escolher data</button><span class="err"></span></div>
+      <div class="campo"><span class="lbl">Data da volta</span><button type="button" class="dt" data-k="volta">Escolher data</button><em class="dica">Deixe em branco se for só ida</em><span class="err"></span></div>
+      <label>Quantas pessoas?<select name="pes"><option value="" disabled selected>Escolha</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>Mais de 15</option></select><span class="err"></span></label>
+      <label>Nome do hotel ou pousada<input name="hotel" type="text" maxlength="80" placeholder="Ex.: Pousada Beira Mar"><em class="dica">Opcional, onde você vai se hospedar</em></label>
       <button class="btn full" type="submit"><svg><use href="#wa"/></svg>Pedir orçamento no WhatsApp</button>
-      <small class="full">A mensagem já chega pronta no WhatsApp do Neto.</small>
+      <small class="full">A mensagem já chega pronta no WhatsApp da Transfer Alagoas.</small>
     </form>
     <div class="cal-bg" id="cal" hidden data-lenis-prevent><div class="cal" role="dialog" aria-modal="true" aria-label="Escolher data">
       <p class="cal-t"></p>
       <div class="cal-h"><button type="button" class="cal-p" aria-label="Mês anterior">‹</button><b></b><button type="button" class="cal-n" aria-label="Próximo mês">›</button></div>
       <div class="cal-w"><span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span></div>
       <div class="cal-g"></div>
-      <div class="cal-f"><button type="button" class="cal-so">Ainda não sei</button><button type="button" class="cal-x">Fechar</button></div>
+      <div class="cal-f"><button type="button" class="cal-so">Só ida</button><button type="button" class="cal-x">Fechar</button></div>
     </div></div>
-  </div>
-  </div>
-</section>
-
-<section class="aval" id="avaliacoes">
-  <div class="wrap">
-    <div class="aval-h">
-      <div><span class="k rv">Avaliações</span><h2 class="split">Quem foi, voltou contando.</h2></div>
-      <div class="nota rv"><svg><use href="#g"/></svg><b>5,0</b><div><span class="est brilho"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><small>201 avaliações no Google</small></div></div>
-    </div>
-    <div class="mural">
-      <div class="dep rv"><div class="dep-top"><span class="est"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><svg><use href="#g"/></svg></div><p>Passamos 6 dias incríveis fazendo passeios diários com o Neto. Viajei com um grupo de 7 idosas e ele foi de um cuidado, paciência e carinho exemplares com elas, respeitando sempre o ritmo do grupo.</p><div class="quem-av"><span class="av" style="background:#1638a6">D</span><div><b>Dariana F.</b><small>Google · há 1 mês</small></div></div></div>
-      <figure class="mfoto rv"><img loading="lazy" decoding="async" src="n-familia.jpg" alt="Cliente com a filha num passeio do Neto"><figcaption>Passeio em família</figcaption></figure>
-      <div class="dep rv"><div class="dep-top"><span class="est"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><svg><use href="#g"/></svg></div><p>Contratar o Neto foi a melhor decisão da nossa viagem! Excelente profissional, muito pontual, simpático e com bom conhecimento histórico e cultural.</p><div class="quem-av"><span class="av" style="background:#e8640c">E</span><div><b>Edith D.</b><small>Google · há 1 mês</small></div></div></div>
-      <div class="dep rv"><div class="dep-top"><span class="est"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><svg><use href="#g"/></svg></div><p>Cuidou de cada detalhe com muito carinho, nos deixou super seguras e garantiu fotos lindas de todo mundo. O passeio fluiu no nosso tempo, sem pressa.</p><div class="quem-av"><span class="av" style="background:#2f9e44">M</span><div><b>Maria das Graças O.</b><small>Google · há 1 mês</small></div></div></div>
-      <figure class="mfoto rv"><img loading="lazy" decoding="async" src="n-coracao.jpg" alt="Cliente do Neto na praia"><figcaption>Clientes do Neto</figcaption></figure>
-      <div class="dep rv"><div class="dep-top"><span class="est"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><svg><use href="#g"/></svg></div><p>Guia excelente! Sempre explicando os lugares por onde passamos, contando as histórias e curiosidades desses lugares.</p><div class="quem-av"><span class="av" style="background:#0b1d4f">M</span><div><b>Mari N.</b><small>Google · há 1 semana</small></div></div></div>
-      <div class="dep rv"><div class="dep-top"><span class="est"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><svg><use href="#g"/></svg></div><p>Deu dicas incríveis de lugares, nos levou nos melhores passeios, sempre pontual e ainda mostrou um lado menos turístico, como restaurante local.</p><div class="quem-av"><span class="av" style="background:#f7931e">A</span><div><b>Alenia V.</b><small>Google · há 5 meses</small></div></div></div>
-      <div class="dep rv"><div class="dep-top"><span class="est"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span><svg><use href="#g"/></svg></div><p>Carro privativo, passeios sensacionais, super divertido, junto com a família toda!</p><div class="quem-av"><span class="av" style="background:#1638a6">M</span><div><b>Mileide Q.</b><small>Google · há 1 ano</small></div></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="final" id="contato">
-  <img loading="lazy" decoding="async" class="bg" src="final.jpg" alt="Jangadas no mar da Pajuçara no fim de tarde">
-  <div class="wrap">
-    <div class="cta">
-      <span class="k rv">Alta temporada chegando</span>
-      <h2 class="split">Alagoas tá te <em>esperando.</em></h2>
-      <p class="rv">Dezembro e janeiro lotam rápido. Garanta seu roteiro com o Neto antes de embarcar.</p>
-      <a class="btn rv" href="#reservar">Montar meu roteiro</a>
-    </div>
-    <footer>
-      <div><img loading="lazy" decoding="async" src="logo.png" alt="Neto Passeios Alagoas"><p>Passeios privativos, transfer e roteiros personalizados em Maceió e em toda Alagoas.</p></div>
-      <div><h4>Fale com o Neto</h4><p><a href="https://wa.me/5582988484654" target="_blank" rel="noopener">WhatsApp (82) 98848-4654</a><br>Atendimento 24 horas<br><a href="https://www.instagram.com/neto_passeios_alagoas/" target="_blank" rel="noopener">Instagram @neto_passeios_alagoas</a><br>Pajuçara · Maceió · AL</p></div>
-      <div><h4>Passeios</h4><p>Maceió · Francês · Gunga<br>Ipioca · Ilha da Crôa · Milagres<br>Maragogi · Foz e Cânions do São Francisco</p></div>
-      <div class="base"><span>Neto Passeios Alagoas · 2026</span><span>Site feito pela Frattini Labs</span></div>
-    </footer>
-  </div>
-</section>
-
-<a class="zap" href="https://wa.me/5582988484654?text=Ol%C3%A1%2C%20Neto!%20Vim%20pelo%20site." target="_blank" rel="noopener" aria-label="WhatsApp do Neto"><svg><use href="#wa"/></svg></a>
-
-<script src="gsap.min.js"></script>
-<script src="ScrollTrigger.min.js"></script>
-<script src="lenis.min.js"></script>
-<script>
-const WA='5582988484654';
-// d = foto deitada (computador), m = foto em pé (celular)
-const ROTEIROS=[
-  {id:'Maragogi',d:'d-maragogi.jpg',m:'n-maragogi-antunes.jpg',mp:'50% 40%',reg:'Costa dos Corais',t:'Maragogi',tx:'As galés de Maragogi e a Praia de Antunes, no horário certo da maré baixa.'},
-  {id:'São Miguel dos Milagres',d:'n-milagres.jpg',m:'n-milagres.jpg',mp:'45% 50%',reg:'Rota Ecológica',t:'Milagres',tx:'Piscinas naturais, coqueiral sem fim e os balanços mais famosos de Alagoas.'},
-  {id:'Ilha da Crôa',d:'d-croa-buggy.jpg',m:'n-croa-buggy.jpg',mp:'50% 55%',reg:'Barra de Santo Antônio',t:'Ilha da Crôa',tx:'A Ilha da Crôa, o mirante da Praia do Carro Quebrado e o Beach Club Capitão Nikolas.'},
-  {id:'Gunga e Barra de São Miguel',d:'d-gunga.jpg',m:'n-gunga.jpg',mp:'50% 40%',reg:'Litoral sul',t:'Gunga',tx:'O mirante sobre o coqueiral, as falésias e a lagoa da Barra de São Miguel.'},
-  {id:'Praia do Francês',d:'frances.jpg',m:'n-frances.jpg',mp:'40% 50%',reg:'Litoral sul',t:'Francês',tx:'Mar calmo protegido pelos recifes e barracas pé na areia.'},
-  {id:'Ipioca',d:'n-hibiscus.jpg',m:'n-hibiscus.jpg',mp:'50% 60%',reg:'Litoral norte de Maceió',t:'Ipioca',tx:'Beach clubs pé na areia, mar azul e espreguiçadeira de frente pra praia.'},
-  {id:'Maceió (city tour)',d:'d-orla.jpg',m:'orla-maceio.jpg',reg:'Capital',t:'Maceió',tx:'Orla da Pajuçara, Ponta Verde, feirinha de artesanato e as histórias da cidade.'},
-  {id:'Foz do São Francisco',d:'d-foz.jpg',m:'n-foz.jpg',mp:'50% 60%',reg:'Piaçabuçu',t:'Foz do São Francisco',tx:'Dunas, rio e mar se encontrando num cenário que parece outro país.'},
-  {id:'Cânions do São Francisco',d:'d-canions.jpg',m:'canions.jpg',reg:'Piranhas · sertão',t:'Cânions do Xingó',tx:'Catamarã entre paredões de pedra nas águas verdes do Velho Chico.'}
-];
-const RESORTS=[
-  ['rs-vilagale.jpg','Barra de Santo Antônio','Vila Galé Alagoas'],
-  ['rs-salmaragogi.jpg','Maragogi','Salinas Maragogi'],
-  ['rs-grandoca.jpg','Maragogi','Grand Oca Maragogi'],
-  ['rs-japaratinga.jpg','Japaratinga','Japaratinga Lounge'],
-  ['rs-maceiomar.jpg','Ipioca · Maceió','Maceió Mar Resort'],
-  ['rs-salmaceio.jpg','Ipioca · Maceió','Salinas Maceió'],
-  ['rs-ipioca.jpg','Ipioca · Maceió','Ipioca Beach Resort']
-];
-const OUTROS=['Roteiro com vários passeios','Outro lugar'];
-const orc=document.getElementById('orc'),palco=document.getElementById('palco'),pgrid=document.getElementById('pgrid'),rgrid=document.getElementById('rgrid');
-const DESTAQUES=['Maragogi','São Miguel dos Milagres','Ilha da Crôa','Foz do São Francisco'];
-const DQ=ROTEIROS.filter(r=>DESTAQUES.includes(r.id));
-DQ.forEach((r,i)=>palco.insertAdjacentHTML('beforeend',`<div class="camada"><picture><source media="(max-width:900px)" srcset="${r.m}"><img loading="lazy" decoding="async" src="${r.d}" alt="${r.t}"${r.mp?` style="--mp:${r.mp}"`:''}></picture><div class="wrap"><div class="nome"><span class="n">${String(i+1).padStart(2,'0')} / ${String(DQ.length).padStart(2,'0')}</span><small>${r.reg}</small><h3>${r.t}</h3></div><div class="lado"><p>${r.tx}</p><a class="btn" href="#reservar" data-pre="${r.id}">Quero esse</a></div></div><div class="esc"></div></div>`));
-const TAM=['g','t','','','','','w','t','g'];
-ROTEIROS.forEach((r,i)=>{
-  const tm=TAM[i]||'',deitada=tm==='g'||tm==='w';
-  pgrid.insertAdjacentHTML('beforeend',`<a class="pcard rv ${tm}" href="#reservar" data-pre="${r.id}"><img decoding="async" src="${deitada?r.d:r.m}" alt="${r.t}" loading="lazy" style="object-position:${deitada?'50% 50%':(r.mp||'50% 50%')}"><span><small>${r.reg}</small><b>${r.t}</b><em>Quero esse →</em></span></a>`);
-  orc.dest.insertAdjacentHTML('beforeend',`<option value="${r.id}">${r.t}</option>`);
-});
-pgrid.insertAdjacentHTML('beforeend',`<a class="pcard cta rv t" href="#reservar" data-pre="Roteiro com vários passeios"><span><small>Vários dias em Alagoas?</small><b>Monte um roteiro com vários passeios</b></span><p>O Neto organiza a ordem certa pra aproveitar a maré e não perder tempo na estrada.</p><span><em>Montar meu roteiro →</em></span></a>`);
-OUTROS.forEach(o=>orc.dest.insertAdjacentHTML('beforeend',`<option>${o}</option>`));
-const TR=['g','t','','','','w',''];
-RESORTS.forEach(([img,loc,n],i)=>rgrid.insertAdjacentHTML('beforeend',`<a class="rcard rv ${TR[i]||''}" href="#reservar" data-pre="Transfer aeroporto ⇄ hotel" data-hotel="${n}"><img decoding="async" src="${img}" alt="${n}" loading="lazy"><span><small>${loc}</small><b>${n}</b><em>Cotar transfer →</em></span></a>`));
-rgrid.insertAdjacentHTML('beforeend',`<a class="rcard cta rv f" href="#reservar" data-pre="Transfer aeroporto ⇄ hotel"><span><small style="color:#fff">Outro hotel?</small><b>Seu hotel não tá na lista?</b></span><p>O Neto leva pra qualquer hotel ou pousada de Alagoas.</p><span><em>Cotar meu transfer →</em></span></a>`);
-
-/* formulário com calendário (mesmo modelo do site do Agnaldo) */
-(function(){
-var f=orc,cal=document.getElementById('cal'),g=cal.querySelector('.cal-g'),tit=cal.querySelector('.cal-h b'),
+    <script>(function(){
+var f=document.getElementById('orc'),cal=document.getElementById('cal'),g=cal.querySelector('.cal-g'),tit=cal.querySelector('.cal-h b'),
 MES=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
 SEM=['domingo','segunda','terça','quarta','quinta','sexta','sábado'],
 st={ida:null,volta:null},modo='ida',vis;
@@ -568,7 +343,7 @@ function br(d){return ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).sli
 function mesmo(a,b){return a&&b&&a.getTime()===b.getTime()}
 function minDe(k){return k==='volta'&&st.ida?st.ida:hoje()}
 function campo(el){return el.closest('label,.campo')}
-function erro(el,msg){var c=campo(el),e=c.querySelector('.err');if(!e)return;e.textContent=msg||'';c.classList.toggle('inv',!!msg)}
+function erro(el,msg){var c=campo(el),e=c.querySelector('.err');e.textContent=msg||'';c.classList.toggle('inv',!!msg)}
 function bt(k){return f.querySelector('.dt[data-k="'+k+'"]')}
 function pinta(){['ida','volta'].forEach(function(k){var b=bt(k),d=st[k];b.textContent=d?br(d)+' ('+SEM[d.getDay()]+')':'Escolher data';b.classList.toggle('vazio',!d)})}
 function desenha(){var mn=minDe(modo),mx=limite(),ano=vis.getFullYear(),m=vis.getMonth(),ini=new Date(ano,m,1).getDay(),tot=new Date(ano,m+1,0).getDate(),h='';
@@ -582,10 +357,10 @@ if(st.ida&&st.volta&&dt>st.ida&&dt<st.volta)c+=' meio';if(mesmo(dt,hoje()))c+=' 
 h+='<button type="button" data-d="'+d+'" class="'+c+'"'+(off?' disabled':'')+'>'+d+'</button>'}
 g.innerHTML=h}
 function abre(k){modo=k;var base=st[k]||minDe(k);vis=new Date(base.getFullYear(),base.getMonth(),1);
-cal.querySelector('.cal-t').textContent=k==='ida'?'Chegada em Alagoas':'Volta pra casa';
-cal.querySelector('.cal-so').hidden=k!=='volta';desenha();cal.hidden=false;document.documentElement.classList.add('cal-on');if(window.lenis)lenis.stop();
+cal.querySelector('.cal-t').textContent=k==='ida'?'Data da ida':'Data da volta';
+cal.querySelector('.cal-so').hidden=k!=='volta';desenha();cal.hidden=false;document.documentElement.classList.add('cal-on');
 var b=g.querySelector('button.'+k)||g.querySelector('button:not([disabled])');if(b)b.focus()}
-function fecha(){cal.hidden=true;document.documentElement.classList.remove('cal-on');if(window.lenis)lenis.start();bt(modo).focus()}
+function fecha(){cal.hidden=true;document.documentElement.classList.remove('cal-on');bt(modo).focus()}
 f.querySelectorAll('.dt').forEach(function(b){b.addEventListener('click',function(){abre(b.dataset.k)})});
 cal.querySelector('.cal-p').onclick=function(){vis=new Date(vis.getFullYear(),vis.getMonth()-1,1);desenha()};
 cal.querySelector('.cal-n').onclick=function(){vis=new Date(vis.getFullYear(),vis.getMonth()+1,1);desenha()};
@@ -595,107 +370,109 @@ cal.addEventListener('click',function(e){if(e.target===cal)fecha()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!cal.hidden)fecha()});
 g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;
 var d=new Date(vis.getFullYear(),vis.getMonth(),+b.dataset.d);st[modo]=d;
-if(modo==='ida'){erro(bt('ida'));if(st.volta&&st.volta<d){st.volta=null;erro(bt('volta'),'A volta era antes da nova chegada, escolha de novo')}}else erro(bt('volta'));
+if(modo==='ida'){erro(bt('ida'));if(st.volta&&st.volta<d){st.volta=null;erro(bt('volta'),'A volta era antes da nova ida, escolha de novo')}}else erro(bt('volta'));
 pinta();fecha()});
-f.dest.addEventListener('change',function(){var o=this.value==='Outro lugar';document.getElementById('orcOutro').hidden=!o;erro(this);if(o)f.outro.focus()});
+f.dest.addEventListener('change',function(){var o=this.value==='Outro destino';document.getElementById('orcOutro').hidden=!o;erro(this);if(o)f.outro.focus()});
 f.outro.addEventListener('input',function(){erro(this)});
 f.pes.addEventListener('change',function(){erro(this)});
 f.addEventListener('submit',function(e){e.preventDefault();var h=hoje(),primeiro=null;
 function falha(el,msg){erro(el,msg);if(!primeiro)primeiro=el}
 var dest=f.dest.value,outro=f.outro.value.trim();
-if(!dest)falha(f.dest,'Escolha pra onde quer ir');
-else if(dest==='Outro lugar'&&!outro)falha(f.outro,'Escreva qual é o lugar');
-if(!st.ida)falha(bt('ida'),'Escolha a data de chegada');
+if(!dest)falha(f.dest,'Escolha o destino');
+else if(dest==='Outro destino'&&!outro)falha(f.outro,'Escreva qual é o destino');
+if(!st.ida)falha(bt('ida'),'Escolha a data da ida');
 else if(st.ida<h){st.ida=null;pinta();falha(bt('ida'),'Essa data já passou, escolha outra')}
-if(st.volta&&st.ida&&st.volta<st.ida){st.volta=null;pinta();falha(bt('volta'),'A volta não pode ser antes da chegada')}
+if(st.volta&&st.ida&&st.volta<st.ida){st.volta=null;pinta();falha(bt('volta'),'A volta não pode ser antes da ida')}
 if(!f.pes.value)falha(f.pes,'Escolha quantas pessoas');
 if(primeiro){campo(primeiro).scrollIntoView({behavior:'smooth',block:'center'});return}
-var vt=st.volta?'\nVolta: '+br(st.volta)+' ('+SEM[st.volta.getDay()]+')\nTotal: '+(Math.round((st.volta-st.ida)/864e5)+1)+(mesmo(st.volta,st.ida)?' dia':' dias em Alagoas'):'',
-hotel=f.hotel.value.trim(),grupo=f.grupo.value,
-m='Olá, Neto! Vim pelo site e quero um orçamento.\n\nQuero: '+(dest==='Outro lugar'?outro:dest)+'\nChegada: '+br(st.ida)+' ('+SEM[st.ida.getDay()]+')'+vt+'\nPessoas: '+f.pes.value+(grupo?'\nGrupo: '+grupo:'')+(hotel?'\nHospedagem: '+hotel:''),
-url='https://wa.me/'+WA+'?text='+encodeURIComponent(m),w=window.open(url,'_blank');
+var vt=st.volta?'\nData da volta: '+br(st.volta)+' ('+SEM[st.volta.getDay()]+')\nTotal: '+(Math.round((st.volta-st.ida)/864e5)+1)+(mesmo(st.volta,st.ida)?' dia (ida e volta no mesmo dia)':' dias'):'\nSó ida',
+hotel=f.hotel.value.trim(),
+m='Olá! Vim pelo site e quero um orçamento de transfer.\n\nDestino: '+(dest==='Outro destino'?outro:dest)+'\nData da ida: '+br(st.ida)+' ('+SEM[st.ida.getDay()]+')'+vt+'\nPessoas: '+f.pes.value+(hotel?'\nHospedagem: '+hotel:''),
+url='https://wa.me/5582996294714?text='+encodeURIComponent(m),w=window.open(url,'_blank');
 if(!w)location.href=url});
-pinta()})();
+pinta()})();</script>
+  </div>
+</section>
 
-/* "Quero esse", serviços e resorts escolhem o passeio (e o hotel) no formulário */
-document.querySelectorAll('[data-pre]').forEach(b=>b.addEventListener('click',e=>{
-  e.preventDefault();orc.dest.value=b.dataset.pre;orc.dest.dispatchEvent(new Event('change'));
-  if(b.dataset.hotel)orc.hotel.value=b.dataset.hotel;
-  const t=document.getElementById('reservar');window.lenis?lenis.scrollTo(t,{offset:-60}):t.scrollIntoView({behavior:'smooth'});
-}));
+<section class="pas" id="servicos">
+  <div class="tit"><span class="n">03</span><h2 class="split">Do que você precisa?</h2></div>
+  <div class="faixas"><a class="faixa fade" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20um%20transfer%20do%20aeroporto%20pro%20meu%20hotel."><img src="faixa1.jpg" alt="" style="object-position:50% 45%;filter:brightness(.62) saturate(1.05)"><span class="mk"><small>TRANSFER DO AEROPORTO</small><b>Do desembarque direto pro hotel</b><em>Atendimento 24 horas no Zumbi dos Palmares, com carro limpo e ar gelado.</em></span><span class="ir">Quero o transfer →</span></a><a class="faixa fade" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20um%20transfer%20corporativo."><img src="faixa2.jpg" alt="" style="object-position:50% 60%"><span class="mk"><small>CORPORATIVO E EXECUTIVO</small><b>Reuniões, eventos e viagens a trabalho</b><em>Pontualidade pra sua agenda, com o motorista te esperando no horário combinado.</em></span><span class="ir">Quero uma viagem →</span></a></div>
+</section>
 
-/* títulos: palavras sobem com leve rotação */
-document.querySelectorAll('.split').forEach(el=>{
-  const walk=n=>{[...n.childNodes].forEach(c=>{
-    if(c.nodeType===3){const fr=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(p=>{if(!p)return;if(/^\s+$/.test(p)){fr.appendChild(document.createTextNode(' '));return}const w=document.createElement('span');w.className='w';const s=document.createElement('span');s.textContent=p;w.appendChild(s);fr.appendChild(w)});c.replaceWith(fr)}
-    else if(c.nodeType===1)walk(c)})};
-  walk(el);
-});
+<section class="rst" id="resorts">
+  <div class="tit"><span class="n">04</span><h2 class="split">Os resorts que a gente atende</h2><p class="fade">Do desembarque no Zumbi dos Palmares direto pra recepção do seu resort.</p></div>
+  <div class="rgrid"><a class="rcard fade" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20um%20transfer%20pro%20Salinas%20Macei%C3%B3."><img src="rs1.jpg" alt="Salinas Maceió"><span><small>Ipioca · Maceió</small><b>Salinas Maceió</b><em>Cotar transfer →</em></span></a><a class="rcard fade" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20um%20transfer%20pro%20Macei%C3%B3%20Mar%20Resort."><img src="rs2.jpg" alt="Maceió Mar Resort"><span><small>Ipioca · Maceió</small><b>Maceió Mar Resort</b><em>Cotar transfer →</em></span></a><a class="rcard fade" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20um%20transfer%20pro%20Vila%20Gal%C3%A9%20Alagoas."><img src="rs3.jpg" alt="Vila Galé Alagoas"><span><small>Barra de Santo Antônio</small><b>Vila Galé Alagoas</b><em>Cotar transfer →</em></span></a><a class="rcard fade" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20um%20transfer%20pro%20Salinas%20Maragogi."><img src="rs4.jpg" alt="Salinas Maragogi"><span><small>Maragogi</small><b>Salinas Maragogi</b><em>Cotar transfer →</em></span></a><a class="rcard fade" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20um%20transfer%20pro%20Grand%20Oca%20Maragogi."><img src="rs5.jpg" alt="Grand Oca Maragogi"><span><small>Maragogi</small><b>Grand Oca Maragogi</b><em>Cotar transfer →</em></span></a><a class="rcard fade" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20um%20transfer%20pro%20Japaratinga%20Lounge."><img src="rs6.jpg" alt="Japaratinga Lounge"><span><small>Japaratinga</small><b>Japaratinga Lounge</b><em>Cotar transfer →</em></span></a><a class="rcard fade" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20um%20transfer%20pro%20Ipioca%20Beach%20Resort."><img src="rs7.jpg" alt="Ipioca Beach Resort"><span><small>Ipioca · Maceió</small><b>Ipioca Beach Resort</b><em>Cotar transfer →</em></span></a><a class="rcard cta fade" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20cotar%20um%20transfer%20do%20aeroporto%20pro%20meu%20hotel%2C%20que%20%C3%A9%20o%20___."><span><small style="color:#fff">Outro hotel?</small><b>Seu hotel não tá na lista?</b></span><p>A gente leva pra qualquer hotel ou pousada de Maceió e do litoral de Alagoas.</p><span><em>Chamar no WhatsApp →</em></span></a></div>
+</section>
 
+<section class="aval" id="avaliacoes">
+  <div class="tit"><span class="n">05</span><h2 class="split">Quem já viajou com a Transfer Alagoas</h2></div>
+  <div class="nota fade"><svg><use href="#g"/></svg><b>5,0</b><span><span class="est">★★★★★</span>Nota máxima no Google</span></div>
+  
+  
+</section>
+
+<section class="final" id="contato">
+  <img class="final-img" src="final.jpg" alt="" style="object-position:50% 50%">
+  <div class="final-t">
+    <span class="k fade">Alta temporada</span>
+    <h2 class="split">Fim de ano em Alagoas?</h2>
+    <p class="fade">Dezembro e janeiro lotam rápido. Garanta seu transfer antes de embarcar.</p>
+    <a class="btn fade" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20reservar%20meu%20transfer%20pro%20fim%20de%20ano."><svg><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+  </div>
+  <footer>
+    <div><a class="logo lg only" href="#topo"><img class="wide" src="logo.png" alt="Transfer Alagoas"></a><p>Transfer privativo, corporativo e executivo do Aeroporto de Maceió pra hotéis, praias e viagens com hora marcada.</p></div>
+    <div class="c"><h4>Fale com a gente</h4><p>WhatsApp (82) 99629-4714<br>Aeroporto Zumbi dos Palmares, Rio Largo<br>Atendimento 24 horas</p></div>
+    <div class="d"><h4>Destinos</h4><p>Maceió · Maragogi · Milagres<br>Francês · Gunga · Dunas de Marapé<br>Recife</p></div>
+  </footer>
+</section>
+
+<a class="zap" href="https://wa.me/5582996294714?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20tirar%20uma%20d%C3%BAvida." aria-label="WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script src="gsap.min.js"></script>
+<script src="ScrollTrigger.min.js"></script>
+<script src="lenis.min.js"></script>
+<script>
 gsap.registerPlugin(ScrollTrigger);
-const REC=/[?&]rec/.test(location.search);
-window.lenis=null;
-if(!REC&&window.Lenis){
-  window.lenis=new Lenis({lerp:.09});lenis.on('scroll',ScrollTrigger.update);
-  gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
-  document.querySelectorAll('a[href^="#"]:not([data-pre])').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();lenis.scrollTo(a.getAttribute('href'),{offset:a.getAttribute('href')==='#reservar'?-60:0})}));
+const REC = /[?&]rec/.test(location.search);
+let lenis;
+if(!REC && window.Lenis){
+  lenis = new Lenis({lerp:.09});
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(t=>lenis.raf(t*1000)); gsap.ticker.lagSmoothing(0);
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();lenis.scrollTo(a.getAttribute('href'))}));
 }
-if(REC){gsap.ticker.lagSmoothing(0);}
-
+if(REC){
+  gsap.ticker.lagSmoothing(0); gsap.ticker.sleep(); let t=0;
+  window.__step=(dt)=>{t+=dt||1/60; ScrollTrigger.update(); gsap.updateRoot(t);};
+}
 const nav=document.getElementById('nav');
-ScrollTrigger.create({start:0,end:'max',onUpdate:s=>nav.classList.toggle('solid',s.scroll()>innerHeight*.85)});
-
-const SUBIR={yPercent:100,opacity:0,rotate:2.5,duration:1.6,ease:'power4.out',stagger:.045};
-// capa: foto só com fade, título sobe palavra por palavra
-const hero=gsap.timeline({delay:.1});
-hero.from('#heroImg',{opacity:0,duration:1.4,ease:'power1.out'})
-    .from('#heroTit .w>span',SUBIR,.3)
-    .from('.h-fade',{opacity:0,duration:1.5,ease:'power2.out',stagger:.15},1);
-if(REC){hero.pause(0);window.__hero=hero;}
-// estrelas brilhando: um brilho passa de estrela em estrela
-gsap.utils.toArray('.est.brilho').forEach(e=>{
-  gsap.timeline({repeat:-1,repeatDelay:1.6}).to(e.querySelectorAll('i'),{keyframes:[{scale:1.35,color:'#fff3b0',textShadow:'0 0 14px rgba(255,200,40,1)',duration:.22},{scale:1,color:'#ffc21a',textShadow:'0 0 0px rgba(255,200,40,0)',duration:.4}],stagger:.12,ease:'power1.inOut'});
+ScrollTrigger.create({start:0,onUpdate:s=>nav.classList.toggle('solid',s.scroll()>innerHeight*.6)});
+document.querySelectorAll('.split').forEach(el=>{
+  const f=document.createDocumentFragment();
+  el.textContent.split(/(\s+)/).forEach(p=>{if(!p)return;if(/^\s+$/.test(p)){f.appendChild(document.createTextNode(' '));return;}
+    const w=document.createElement('span');w.className='w';const i=document.createElement('span');i.className='wi';i.textContent=p;w.appendChild(i);f.appendChild(w);});
+  el.textContent='';el.appendChild(f);
 });
-// títulos, textos e fotos
-gsap.utils.toArray('.split').forEach(el=>{if(el.id==='heroTit')return;
-  gsap.from(el.querySelectorAll('.w>span'),{...SUBIR,scrollTrigger:{trigger:el,start:'top 86%'}})});
-gsap.utils.toArray('.rv').forEach(el=>gsap.from(el,{opacity:0,duration:1.5,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 92%'}}));
-// Neto: o sol cresce e gira de leve enquanto a seção entra
-gsap.fromTo('#disco',{scale:.6,rotate:-30},{scale:1,rotate:0,ease:'none',scrollTrigger:{trigger:'.quem',start:'top 90%',end:'center center',scrub:true}});
-gsap.from('.sol .foto,.sol .tag',{opacity:0,duration:1.5,stagger:.2,ease:'power2.out',scrollTrigger:{trigger:'.sol',start:'top 80%'}});
-// passeios: o palco fica preso e cada foto cobre a anterior de baixo pra cima, rápido
-const CM=gsap.utils.toArray('.camada');
-CM.slice(1).forEach(c=>gsap.set(c,{clipPath:'inset(100% 0% 0% 0%)'}));
-const tlp=gsap.timeline({scrollTrigger:{trigger:'#palco',start:'top top',end:()=>'+='+(CM.length-1)*innerHeight*.75,pin:true,scrub:REC?true:.8,anticipatePin:1,invalidateOnRefresh:true}});
-CM.slice(1).forEach((c,i)=>{
-  tlp.to(c,{clipPath:'inset(0% 0% 0% 0%)',ease:'none',duration:1},i)
-     .to(CM[i].querySelector('.esc'),{opacity:.6,ease:'none',duration:1},i)
-     .fromTo(c.querySelectorAll('.n,small,h3,p,.btn'),{opacity:0,y:40},{opacity:1,y:0,stagger:.05,duration:.5,ease:'power2.out'},i+.45);
+const hero=gsap.timeline({delay:.2});
+window.__hero=hero;
+hero.from('#capaImg',{opacity:0,duration:1.8,ease:'power2.out'})
+    .from('.capa .wi',{yPercent:100,opacity:0,rotate:2.5,duration:1.6,ease:'power4.out',stagger:.12},.5)
+    .from('.capa .fade',{opacity:0,duration:1.5,ease:'power2.out',stagger:.25},1.0);
+document.querySelectorAll('.split').forEach(el=>{
+  if(el.closest('.capa')) return;
+  gsap.from(el.querySelectorAll('.wi'),{yPercent:100,opacity:0,rotate:2.5,duration:1.6,ease:'power4.out',stagger:.045,scrollTrigger:{trigger:el,start:'top 88%'}});
 });
-gsap.from(CM[0].querySelectorAll('.n,small,h3,p,.btn'),{opacity:0,y:30,duration:1.3,stagger:.08,ease:'power3.out',scrollTrigger:{trigger:'#palco',start:'top 60%'}});
-// capa: "Bora pro" troca o destino sozinho
-const slots=gsap.utils.toArray('#slot b');gsap.set(slots,{yPercent:100});gsap.set(slots[0],{yPercent:0});
-const sl=gsap.timeline({repeat:-1,delay:2.2});
-for(let i=0;i<slots.length-1;i++){sl.to(slots[i],{yPercent:-100,duration:.55,ease:'power3.inOut'},'+=1.4').fromTo(slots[i+1],{yPercent:100},{yPercent:0,duration:.55,ease:'power3.inOut'},'<');}
-sl.set(slots,{yPercent:100}).set(slots[0],{yPercent:0});
-// um dia com o Neto: a linha se desenha na rolagem
-gsap.to('#eixo',{scaleY:1,ease:'none',scrollTrigger:{trigger:'.linha',start:'top 65%',end:'bottom 65%',scrub:true}});
-gsap.utils.toArray('.passo').forEach(p=>{
-  gsap.from(p.querySelector('.img'),{opacity:0,duration:1.5,ease:'power2.out',scrollTrigger:{trigger:p,start:'top 82%'}});
-  gsap.from(p.querySelector('.tx'),{opacity:0,y:30,duration:1.2,ease:'power3.out',delay:.15,scrollTrigger:{trigger:p,start:'top 82%'}});
-  gsap.from(p.querySelector('.ponto'),{scale:0,duration:.6,ease:'back.out(3)',scrollTrigger:{trigger:p,start:'top 65%'}});
+document.querySelectorAll('.fade').forEach(el=>{
+  if(el.closest('.capa')) return;
+  gsap.from(el,{opacity:0,y:22,duration:1.5,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 92%'}});
 });
-
-const mm=gsap.matchMedia();
-mm.add('(min-width:901px)',()=>{
-  // capa fica parada e escurece enquanto a seção do Neto sobe por cima como um cartão que se abre
-  ScrollTrigger.create({trigger:'.hero',start:'top top',end:'bottom top',pin:true,pinSpacing:false});
-  gsap.to('#heroSombra',{opacity:.75,ease:'none',scrollTrigger:{trigger:'.quem',start:'top bottom',end:'top top',scrub:true}});
-  gsap.fromTo('.quem',{clipPath:'inset(6% 6% 0% 6% round 36px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:'.quem',start:'top bottom',end:'top top',scrub:true}});
-  // orçamento abre como um cartão por cima dos resorts
-  gsap.fromTo('#reservar',{clipPath:'inset(7% 6% 0% 6%)'},{clipPath:'inset(0% 0% 0% 0%)',ease:'none',scrollTrigger:{trigger:'#reservar',start:'top 95%',end:'top 25%',scrub:REC?true:1}});
+if(document.querySelector('#passos'))gsap.from('#passos li',{opacity:0,y:18,stagger:.14,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:'#passos',start:'top 85%'}});
+gsap.utils.toArray('.painel').forEach(p=>{
+  gsap.from(p.querySelectorAll('small,h3,p,.btn'),{opacity:0,y:26,duration:1.3,stagger:.1,ease:'power3.out',scrollTrigger:{trigger:p,start:'top 55%'}});
 });
+gsap.fromTo('#reservar',{clipPath:'inset(7% 6% 0% 6%)'},{clipPath:'inset(0% 0% 0% 0%)',ease:'none',scrollTrigger:{trigger:'#reservar',start:'top 95%',end:'top 25%',scrub:REC?true:1}});
 window.addEventListener('load',()=>ScrollTrigger.refresh());
+ScrollTrigger.refresh();
 </script>
 </body>
 </html>
